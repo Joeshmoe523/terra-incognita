@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, param: :token
+  resources :users, param: :token, only: [ :show, :index ]
 
   get "pages/home"
 
