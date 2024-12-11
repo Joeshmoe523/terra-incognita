@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_11_000723) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_11_002830) do
   create_table "growth_plans", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -26,6 +26,8 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_11_000723) do
     t.string "scope"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "token"
+    t.index ["token"], name: "index_growth_plans_on_token", unique: true
   end
 
   create_table "users", force: :cascade do |t|
