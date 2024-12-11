@@ -1,0 +1,2 @@
+class GrowthPlan < ApplicationRecord
+end
